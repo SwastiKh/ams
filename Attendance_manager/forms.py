@@ -10,9 +10,10 @@ class Course(forms.ModelForm):
     class Meta:
         model = Course
         fields=['course_id', 'name']
-        #exclude = ('user',)
+
         
 class Attendance(forms.ModelForm):
     class Meta:
         model = Attendance
         fields = ['student', 'course', 'date']
+        exclude=('user,')
